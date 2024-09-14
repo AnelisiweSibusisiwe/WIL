@@ -1,0 +1,36 @@
+﻿@model BumbleBeeFoundation.Models.DonationSar
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DonationSar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GeneratedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GeneratedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sarsdocument)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sarsdocument)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Donation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Donation.DonationId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Sarsid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

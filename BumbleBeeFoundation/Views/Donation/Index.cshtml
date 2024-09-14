@@ -1,0 +1,83 @@
+﻿@model IEnumerable<BumbleBeeFoundation.Models.Donation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Donate</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DonationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonationType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonationAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonorIdnumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonorTaxNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonorEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonorPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonationAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorIdnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorTaxNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.CompanyId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DonationId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DonationId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DonationId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

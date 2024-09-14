@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image at Bottom Quarter</title>
+    <style>
+        /* The main page content (covering the top three-quarters) */
+        .content {
+            height: 75vh; /* Takes 75% of the viewport height */
+            background-color: #f0f0f0; /* Optional background color for the top */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The bottom quarter with the background image */
+        .bottom-background {
+            height: 25vh; /* Takes 25% of the viewport height */
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmE2-SkaYCcSht5zhpq143dBcYTeakc9zncQ&usqp=CAU');
+            background-size: cover; /* Cover the container */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repetition */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p1>
+           
+            Last Updated: 23/07/2024
+            <br />
+            The Bumblebee Foundation ("we," "our," "us") values your privacy and is committed to protecting your personal information.<br />
+            This policy explains how we collect, use, and safeguard your data when you engage with us.
+            <br />
+            1. Information We Collect
+            <br />
+            We may gather:
+            <br />
+            Personal Information: Such as your name, email, phone number, and address.
+            Financial Information: Securely processed payment details for donations.
+            Usage Data: Non-personal details like your IP address, browser type, and site usage.
+            Cookies: Used to enhance your experience on our website.
+            <br />
+            2. How We Use Your Information
+            We use your data to:
+            <br />
+            Process donations and provide receipts.
+            Communicate about our initiatives and events.
+            Improve our website and services.
+            Comply with legal requirements.
+            <br />
+            3. Sharing Your Information
+            We do not sell or trade your data. It may be shared with trusted service providers (e.g., payment processors) or as required by law.
+            <br />
+            4. Data Security
+            <br />
+            We use appropriate measures to protect your data, though no method is completely secure.
+        </p1>
+    </div>
+    <div class="bottom-background"></div>
+</body>
+</html>
+
